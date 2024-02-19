@@ -1,0 +1,48 @@
+/**
+*   This file was generated automatically by the 'createModuleBuild' task.
+*   Created at: 2024-02-07T18:22:19.043920Z.
+*
+*   WARNING: Do not put your credentials directly in this file.
+*
+*/
+
+group          = "com.etendoerp"
+version        = "1.0.0"
+description    = "Procurement Extensions Spanish Translation"
+ext.artifact   = "procurement.extensions.es_es"
+ext.repository = "https://maven.pkg.github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es"
+apply from: 'extension-modules.gradle'
+configurations {
+    moduleDependencyContainer
+}
+
+publishing {
+    publications {
+        "com.etendoerp.procurement.extensions.es_es"(MavenPublication) {
+            from components.java
+            groupId    = group
+            artifactId = artifact
+            version    = version
+        }
+    }
+    repositories {
+        maven {
+            url "https://maven.pkg.github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es"
+        }
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://maven.pkg.github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es"
+    }
+}
+
+/**
+* Declare Java dependencies using 'implementation'
+* Ex: implementation "com.sun.mail:javax.mail:1.6.2"
+*/
+dependencies {
+   implementation('com.etendoerp:purchase.invoice.validations.es_es:1.0.0')
+}
