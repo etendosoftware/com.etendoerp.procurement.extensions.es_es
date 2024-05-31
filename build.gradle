@@ -7,7 +7,7 @@
 */
 
 group          = "com.etendoerp"
-version        = "1.0.0"
+version        = "1.0.1"
 description    = "Procurement Extensions Spanish Translation"
 ext.artifact   = "procurement.extensions.es_es"
 ext.repository = "https://maven.pkg.github.com/etendosoftware/com.etendoerp.procurement.extensions.es_es"
@@ -44,5 +44,5 @@ repositories {
 * Ex: implementation "com.sun.mail:javax.mail:1.6.2"
 */
 dependencies {
-   implementation('com.etendoerp:purchase.invoice.validations.es_es:1.0.0')
+   implementation('com.etendoerp:purchase.invoice.validations.es_es:1.0.1')
 }
